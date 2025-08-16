@@ -1,8 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
   --header-color: #fbfbfb !important;
-  --primary-color: #0039c6 !important;
-  --tertiary-color: #344bd4 !important;
+  --primary-color: #002788 !important;
+  --tertiary-color: #0026ff !important;
   --secondaryBtn-color: #eff6fe !important;
   --text-color: #343639 !important;
   --default-padding-btn: 15px 30px;
@@ -38,6 +38,24 @@
   box-sizing: border-box;
   overflow-x: none;
   overflow-y: none;
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+}
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 @font-face {
   font-family: "jakarta";
@@ -53,7 +71,18 @@ body {
   overflow-x: hidden;
   background-color: var(--pageBg);
 }
-
+.title {
+  color: #fff;
+  font-size: 40px;
+  line-height: 55px;
+}
+.sub__title {
+  font-size: 30px;
+  line-height: 40px;
+}
+.mivLogo {
+  width: 25%;
+}
 h4 {
   font-family: "jakarta";
   word-break: break-word;
@@ -91,6 +120,7 @@ h1 {
   font-size: clamp(0.78rem, 2.5vw, 0.813rem);
   word-break: break-word;
   font-variation-settings: "wght" 300;
+  font-size: 20px;
 }
 
 .pSubText {
@@ -99,6 +129,7 @@ h1 {
   font-size: clamp(0.6rem, 2.5vw, 0.75rem);
   line-height: 1.6;
   word-break: break-word;
+  font-size: 15px;
 }
 
 p {
@@ -107,4 +138,153 @@ p {
   font-size: clamp(0.75rem, 2.5vw, 0.8rem);
   line-height: 1.6;
   word-break: break-word;
+}
+.btn__wrapper {
+  display: flex;
+  align-items: center;
+  column-gap: 40px;
+}
+.button__one {
+  background-color: var(--primary-color);
+  border: none;
+  padding: 8px 20px;
+  color: #fff;
+  border-radius: 32px;
+  cursor: pointer;
+}
+.button__one:hover {
+  background-color: var(--tertiary-color);
+}
+.button__two {
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  padding: 8px 20px;
+  background-color: transparent;
+  border-radius: 32px;
+  cursor: pointer;
+}
+.button__three {
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 8px 20px;
+  background-color: transparent;
+  border-radius: 32px;
+  cursor: pointer;
+}
+.button__two:hover,
+.button__three:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: 1px solid var(--primary-color);
+}
+.link {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: var(--tertiary-color);
+  transition: width 0.3s ease-in-out;
+}
+
+.link:hover::after {
+  width: 100%;
+}
+.mobile {
+  display: none;
+}
+.menu__icon {
+  color: var(--primary-color);
+  font-size: 30px;
+}
+.img__logo__two {
+  width: 4%;
+}
+.img__logo__three {
+  position: absolute;
+  top: 10%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 50px;
+}
+.icon__wwe {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+}
+.icon__wwe__center {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+  width: 50%;
+}
+.span__one {
+  color: var(--primary-color);
+}
+.women__praying {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+.image__container {
+  position: relative;
+  display: inline-block;
+}
+.call__wrapper {
+  color: #fff;
+}
+.number__wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.number__bold {
+  font-weight: bold;
+  font-size: 20px;
+}
+@media (max-width: 1024px) {
+  .call__wrapper {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .link__wrapper {
+    display: none !important;
+  }
+  .link__wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--background-color, rgba(0, 0, 0, 0.85));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+  .section__one {
+    padding: 10px !important;
+  }
 }

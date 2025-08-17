@@ -3,6 +3,7 @@
   --header-color: #fbfbfb !important;
   --primary-color: #002788 !important;
   --tertiary-color: #0026ff !important;
+  --tertiary-color2: #000a3e !important;
   --secondaryBtn-color: #eff6fe !important;
   --text-color: #343639 !important;
   --default-padding-btn: 15px 30px;
@@ -39,7 +40,7 @@
   overflow-x: none;
   overflow-y: none;
   scrollbar-width: thin;
-  scrollbar-color: #888 #f1f1f1;
+  scrollbar-color: var(--tertiary-color2) #000000;
 }
 ::-webkit-scrollbar {
   width: 6px;
@@ -71,14 +72,31 @@ body {
   overflow-x: hidden;
   background-color: var(--pageBg);
 }
+.p10 {
+  padding-top: 10px;
+}
+.p20 {
+  padding-top: 20px;
+}
+.p30 {
+  padding-top: 30px;
+}
+.p40 {
+  padding-top: 40px;
+}
+.p50 {
+  padding-top: 50px;
+}
 .title {
   color: #fff;
   font-size: 40px;
   line-height: 55px;
+  font-family: "jakarta";
 }
 .sub__title {
   font-size: 30px;
   line-height: 40px;
+  font-family: "jakarta";
 }
 .mivLogo {
   width: 25%;
@@ -151,6 +169,9 @@ p {
   color: #fff;
   border-radius: 32px;
   cursor: pointer;
+  font-family: "jakarta";
+  font-variation-settings: "wght" 300;
+  font-size: clamp(0.6rem, 2.5vw, 0.75rem);
 }
 .button__one:hover {
   background-color: var(--tertiary-color);
@@ -162,14 +183,44 @@ p {
   background-color: transparent;
   border-radius: 32px;
   cursor: pointer;
+  font-family: "jakarta";
+  font-variation-settings: "wght" 300;
+  font-size: clamp(0.6rem, 2.5vw, 0.75rem);
 }
 .button__three {
+  position: relative;
   color: #fff;
   border: 1px solid #fff;
   padding: 8px 20px;
   background-color: transparent;
   border-radius: 32px;
   cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+  font-family: "jakarta";
+  font-variation-settings: "wght" 300;
+  font-size: clamp(0.6rem, 2.5vw, 0.75rem);
+}
+.button__three::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color);
+  z-index: -1;
+  transition: width 0.4s ease-in-out;
+  border-radius: 32px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 1s ease;
+}
+
+.button__three:hover::after {
+  width: 100%;
+  transform: scaleX(1);
+  transition: transform 1s ease;
 }
 .button__two:hover,
 .button__three:hover {
@@ -207,7 +258,7 @@ p {
   font-size: 30px;
 }
 .img__logo__two {
-  width: 4%;
+  width: 6%;
 }
 .img__logo__three {
   position: absolute;
@@ -225,7 +276,9 @@ p {
   display: flex;
   align-items: center;
   column-gap: 5px;
-  width: 50%;
+  width: 40%;
+  margin: auto;
+  justify-content: center;
 }
 .span__one {
   color: var(--primary-color);
@@ -235,6 +288,7 @@ p {
   width: 100%;
   height: auto;
   border-radius: 20px;
+  box-shadow: 0 0 5px #000;
 }
 .image__container {
   position: relative;
@@ -250,7 +304,38 @@ p {
 }
 .number__bold {
   font-weight: bold;
-  font-size: 20px;
+  font-size: 30px;
+}
+.section__four__top {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 5px;
+  color: #fff;
+  justify-content: center;
+}
+.section__four__card {
+  width: 20%;
+  background-color: #fff;
+  box-shadow: 0 0 3px rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  align-items: start;
+  padding: 20px 10px;
+  border-radius: 12px;
+}
+
+.section__four__img {
+  width: 100%;
+  border-radius: 12px;
+}
+.section__four__card__wrapper {
+  display: flex;
+  column-gap: 20px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 @media (max-width: 1024px) {
   .call__wrapper {
@@ -283,6 +368,7 @@ p {
   }
   .mobile {
     display: block;
+    color: #fff;
   }
   .section__one {
     padding: 10px !important;

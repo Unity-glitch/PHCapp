@@ -1,5 +1,5 @@
 .img__logo {
-  width: 50px;
+  width: 45px;
   cursor: pointer;
 }
 div.section__one__two__bg {
@@ -8,7 +8,6 @@ div.section__one__two__bg {
   background-position: center;
   background-blend-mode: overlay;
   background-color: rgba(0, 0, 0, 0.8);
-  height: 100vh;
 }
 .section__one {
   display: flex;
@@ -46,6 +45,7 @@ div.section__one__two__bg {
   display: flex;
   align-items: center;
   column-gap: 5px;
+  padding: 5px 0;
 }
 
 /* section two  */
@@ -61,13 +61,17 @@ div.section__one__two__bg {
   width: 50%;
   margin: auto;
   text-align: center;
+  /* height: 100vh; */
 }
 /* section three  */
 
 .section__three {
-  height: 100vh;
   background-color: var(--pageBg);
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 80px;
+  padding: 6% 0;
 }
 .section__three__left {
   width: 36%;
@@ -82,7 +86,6 @@ div.section__one__two__bg {
   align-items: center;
   justify-content: space-between;
   justify-content: center;
-  padding: 5% 0;
 }
 .section__three__card {
   display: flex;
@@ -94,6 +97,20 @@ div.section__one__two__bg {
   column-gap: 20px;
   align-items: center;
   justify-content: space-between;
-  padding: 4% 9%;
+  padding: 0 9%;
   width: 100%;
+}
+
+/* section four  */
+.section__four {
+  background: url(../../assets/images/wallpaper\ latern.jpg);
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 70px;
+  padding: 6% 0;
 }

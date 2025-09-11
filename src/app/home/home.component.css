@@ -2,12 +2,13 @@
   width: 45px;
   cursor: pointer;
 }
-div.section__one__two__bg {
+.section__one__two__bg {
   background: url(/assets/images/family2.jpg);
   background-size: cover;
   background-position: center;
   background-blend-mode: overlay;
   background-color: rgba(0, 0, 0, 0.8);
+  height: 100vh;
 }
 .section__one {
   display: flex;
@@ -55,13 +56,13 @@ div.section__one__two__bg {
 .title__wrapper {
   display: flex;
   flex-direction: column;
-  row-gap: 30px;
+  row-gap: 40px;
   align-items: center;
   justify-content: center;
-  width: 50%;
+  width: 60%;
   margin: auto;
   text-align: center;
-  /* height: 100vh; */
+  height: 70vh;
 }
 /* section three  */
 
@@ -73,7 +74,7 @@ div.section__one__two__bg {
   row-gap: 80px;
   padding: 6% 0;
 }
-.section__three__left {
+.left {
   width: 36%;
   display: flex;
   flex-direction: column;

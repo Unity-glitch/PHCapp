@@ -89,7 +89,7 @@ body {
 }
 .title {
   color: #fff;
-  font-size: 40px;
+  font-size: 45px;
   line-height: 55px;
   font-family: "jakarta";
 }
@@ -99,7 +99,7 @@ body {
   font-family: "jakarta";
 }
 .mivLogo {
-  width: 25%;
+  width: 200px;
 }
 h4 {
   font-family: "jakarta";
@@ -283,6 +283,10 @@ p {
 .span__one {
   color: var(--primary-color);
 }
+.span__two {
+  color: var(--primary-color);
+  font-weight: 600;
+}
 .women__praying {
   display: block;
   width: 100%;
@@ -337,10 +341,43 @@ p {
   justify-content: center;
   width: 100%;
 }
+.tab__button {
+  padding: 6px 24px;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 12px;
+  color: #fff;
+}
+.tab__wrapper {
+  display: flex;
+  align-items: center;
+  column-gap: 30px;
+}
+
+.icon__content {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+.cross__icon {
+  color: var(--primary-color);
+}
 @media (max-width: 1024px) {
   .call__wrapper {
     display: none;
   }
+  .title__wrapper {
+    width: 100% !important;
+    padding: 10px;
+  }
+  .title {
+    color: #fff;
+    font-size: 35px;
+    line-height: 35px;
+    font-family: "jakarta";
+  }
+}
+@media (min-width: 1024px) {
 }
 
 @media (max-width: 900px) {

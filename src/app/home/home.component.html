@@ -1,46 +1,21 @@
 <div class="container">
   <div class="section__one__two__bg">
-    <div class="section__one">
-      <div class="logo__wrapper" (click)="homePage()">
-        <img
-          class="img__logo"
-          src="../../assets/images/ph-logo-circle.png"
-          alt=""
-        />
-        <p class="logo__text">Potter's House Church</p>
-      </div>
-      <div class="link__wrapper">
-        <p class="link">Home</p>
-        <p class="link">Pages</p>
-        <p class="link">Donations</p>
-        <p class="link">Events</p>
-        <p class="link">Blogs</p>
-        <p class="link">Contact Us</p>
-      </div>
-      <div class="link__wrapper__two">
-        <i class="ri-customer-service-line service__icon"></i>
-        <div class="call__wrapper">
-          <p>Call Us Now</p>
-          <p>(+234) 1234 567 890</p>
-        </div>
-        <button class="button__three desktop">Donate Now</button>
-        <i (click)="showMenu()" class="ri-menu-3-line menu__icon mobile"></i>
-      </div>
-    </div>
+    <navbar></navbar>
     <div class="section__two">
       <div class="title__wrapper">
         <img
-          class="mivLogo"
+          class="mivLogo p50"
           src="../../assets/images/ph-logo-circle.png"
           alt=""
         />
         <h1 class="title">
           Reaching the unreached at all cost and reawakening the church to her
           responsibilities
-          <!-- {{ currentText }} -->
         </h1>
         <div class="btn__wrapper">
-          <button class="button__one">Watch Live</button>
+          <button class="button__one">
+            <i class="ri-live-fill"></i> Watch Live
+          </button>
           <button class="button__three">Explore Sermons</button>
         </div>
       </div>
@@ -82,7 +57,7 @@
               alt=""
             />
             <img
-              class="img__logo__three"
+              class="img__logo__three rotate"
               src="../../assets/images/ph-logo-circle.png"
               alt=""
             />
@@ -92,45 +67,45 @@
     </div>
     <div class="section__three__wrapper__two">
       <div class="section__three__card">
-        <p>Sermons Preached</p>
+        <p class="pSubText">Sermons Preached</p>
         <div class="number__wrapper">
           <h4 class="number__bold">45K</h4>
           <h4>+</h4>
         </div>
-        <p>
+        <p class="pSubText text__center">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta minus
           quasi error.
         </p>
       </div>
       <div class="section__three__card">
-        <p>Baptisms Performed</p>
+        <p class="pSubText">Baptisms Performed</p>
         <div class="number__wrapper">
           <h4 class="number__bold">55K</h4>
           <h4>+</h4>
         </div>
-        <p>
+        <p class="pSubText text__center">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta minus
           quasi error.
         </p>
       </div>
       <div class="section__three__card">
-        <p>Podcast Downloads</p>
+        <p class="pSubText">Podcast Downloads</p>
         <div class="number__wrapper">
           <h4 class="number__bold">38K</h4>
           <h4>+</h4>
         </div>
-        <p>
+        <p class="pSubText text__center">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta minus
           quasi error.
         </p>
       </div>
       <div class="section__three__card">
-        <p>Years in Ministry</p>
+        <p class="pSubText">Years in Ministry</p>
         <div class="number__wrapper">
           <h4 class="number__bold">35K</h4>
           <h4>+</h4>
         </div>
-        <p>
+        <p class="pSubText text__center">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta minus
           quasi error.
         </p>
@@ -141,28 +116,28 @@
     <div class="section__four__top">
       <div class="icon__wwe__center">
         <img
-          class="img__logo__two"
+          class="img__logo__two__two"
           src="/assets/images/ph-logo-circle.png"
           alt=""
         />
         <p class="pText">Featured Sermons</p>
       </div>
-      <h2>Experience Real Sermons</h2>
+      <h2 class="sub__title">Experience Real Sermons</h2>
       <div class="btn__wrapper p20">
         <button class="button__one">
           <i class="ri-file-word-2-line"></i> Read Sermons
         </button>
-        <button class="button__three">
+        <button class="button__one">
           <i class="ri-headphone-line"></i> Listen Sermons
         </button>
       </div>
     </div>
     <div class="section__four__bottom">
-      <div class="section__four__card__wrapper">
+      <div class="grid__card">
         <div class="section__four__card">
           <img
             class="section__four__img"
-            src="../../assets/images/band stage 2.jpeg"
+            src="../../assets/images/women praying.jpg"
             alt=""
           />
           <h4 class="pSubText">
@@ -173,7 +148,7 @@
         <div class="section__four__card">
           <img
             class="section__four__img"
-            src="../../assets/images/PstJoel.jpg"
+            src="../../assets/images/bible-reading.jpg"
             alt=""
           />
           <h4 class="pSubText">
@@ -184,7 +159,7 @@
         <div class="section__four__card">
           <img
             class="section__four__img"
-            src="../../assets/images/PstJoel.jpg"
+            src="../../assets/images/hands-up.jpg"
             alt=""
           />
           <h4 class="pSubText">
@@ -195,7 +170,7 @@
         <div class="section__four__card">
           <img
             class="section__four__img"
-            src="../../assets/images/band stage 2.jpeg"
+            src="../../assets/images/worship.jpg"
             alt=""
           />
           <h4 class="pSubText">
@@ -205,7 +180,7 @@
         </div>
       </div>
     </div>
-    <button class="button__one">View Sermons</button>
+    <button class="button__one centered__btn">View Sermons</button>
   </div>
 
   <div class="section__five">
@@ -223,14 +198,44 @@
         <span class="span__one">A Home</span> for the heart.
       </h2>
       <div class="tab__wrapper">
-        <p class="tab__button">Our Mission</p>
-        <p class="tab__button">Our Vision</p>
-        <p class="tab__button">Our Values</p>
+        <button
+          [ngStyle]="{
+            'background-color':
+              activeTab === 'mission' ? '#002788 ' : 'transparent',
+            color: activeTab === 'mission' ? 'white' : 'black'
+          }"
+          (click)="activeTab = 'mission'"
+          class="tab__button"
+        >
+          Our Mission
+        </button>
+        <button
+          [ngStyle]="{
+            'background-color':
+              activeTab === 'vision' ? '#002788 ' : 'transparent',
+            color: activeTab === 'vision' ? 'white' : 'black'
+          }"
+          (click)="activeTab = 'vision'"
+          class="tab__button"
+        >
+          Our Vision
+        </button>
+        <button
+          [ngStyle]="{
+            'background-color':
+              activeTab === 'value' ? '#002788 ' : 'transparent',
+            color: activeTab === 'value' ? 'white' : 'black'
+          }"
+          (click)="activeTab = 'value'"
+          class="tab__button"
+        >
+          Our Values
+        </button>
       </div>
-      <div class="tab__details__wrapper">
-        <div class="tab__details">
-          <p>
-            <span class="span__two">Lorem Ipsum:</span> Lorem ipsum dolor sit
+      <div [ngSwitch]="activeTab" class="tab__details__wrapper">
+        <div *ngSwitchCase="'mission'" class="tab__details">
+          <p class="pSubText text__left">
+            <span class="span__two">Our Mission:</span> Lorem ipsum dolor sit
             amet consectetur adipisicing elit. Cupiditate autem eos temporibus
             molestiae laboriosam perferendis asperiores non possimus nobis. Et
             provident maiores harum aliquam adipisci? Blanditiis, fuga nihil?
@@ -238,33 +243,249 @@
           </p>
           <div class="icon__content">
             <i class="ri ri-cross-line cross__icon"></i>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p class="pSubText">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
           </div>
           <div class="icon__content">
             <i class="ri ri-cross-line cross__icon"></i>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p class="pSubText">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
           </div>
           <div class="icon__content">
             <i class="ri ri-cross-line cross__icon"></i>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p class="pSubText">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
           </div>
-          <div class="icon__content">
-            <i class="ri ri-cross-line cross__icon"></i>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          </div>
-          <div class="icon__content">
-            <i class="ri ri-cross-line cross__icon"></i>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          </div>
-          <button class="button__two">More Details</button>
         </div>
+        <div *ngSwitchCase="'vision'" class="tab__details">
+          <p class="pSubText text__left">
+            <span class="span__two">Our Vision:</span> Lorem ipsum dolor sit
+            amet consectetur adipisicing elit. Cupiditate autem eos temporibus
+            molestiae laboriosam perferendis asperiores non possimus nobis. Et
+            provident maiores harum aliquam adipisci? Blanditiis, fuga nihil?
+            Ea, necessitatibus.
+          </p>
+          <div class="icon__content">
+            <i class="ri ri-cross-line cross__icon"></i>
+            <p class="pSubText">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+          </div>
+          <div class="icon__content">
+            <i class="ri ri-cross-line cross__icon"></i>
+            <p class="pSubText">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+          </div>
+          <div class="icon__content">
+            <i class="ri ri-cross-line cross__icon"></i>
+            <p class="pSubText">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+          </div>
+          <div class="icon__content">
+            <i class="ri ri-cross-line cross__icon"></i>
+            <p class="pSubText">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+          </div>
+        </div>
+        <div *ngSwitchCase="'value'" class="tab__details">
+          <p class="pSubText text__left">
+            <span class="span__two">Our Value:</span> Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Cupiditate autem eos temporibus
+            molestiae laboriosam perferendis asperiores non possimus nobis. Et
+            provident maiores harum aliquam adipisci? Blanditiis, fuga nihil?
+            Ea, necessitatibus.
+          </p>
+          <div class="icon__content">
+            <i class="ri ri-cross-line cross__icon"></i>
+            <p class="pSubText">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+          </div>
+          <div class="icon__content">
+            <i class="ri ri-cross-line cross__icon"></i>
+            <p class="pSubText">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+          </div>
+          <div class="icon__content">
+            <i class="ri ri-cross-line cross__icon"></i>
+            <p class="pSubText">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+          </div>
+          <div class="icon__content">
+            <i class="ri ri-cross-line cross__icon"></i>
+            <p class="pSubText">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+          </div>
+          <div class="icon__content">
+            <i class="ri ri-cross-line cross__icon"></i>
+            <p class="pSubText">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+          </div>
+        </div>
+        <button class="button__one">More Details</button>
       </div>
     </div>
     <div class="right">
       <div>
-        <img src="" alt="" />
+        <a href="https://www.youtube.com/watch?v=uwsPRcCwZDE" target="_blank">
+          <img
+            class="video__wrapper"
+            src="https://img.youtube.com/vi/uwsPRcCwZDE/hqdefault.jpg"
+            alt="Video Thumbnail"
+            style="
+              width: 500px;
+              border-radius: 8px;
+              cursor: pointer;
+              margin: 120px 0;
+            "
+          />
+        </a>
       </div>
     </div>
-    <div class="section__five__right"></div>
+  </div>
+  <div class="section__six">
+    <div class="left">
+      <div class="icon__wwe">
+        <img
+          class="img__logo__two"
+          src="/assets/images/ph-logo-circle.png"
+          alt=""
+        />
+        <p class="pText">Church Pastors</p>
+      </div>
+      <h2 class="sub__title">Feel God closer to Pastors</h2>
+    </div>
+    <div class="right">
+      <div class="grid__card">
+        <div class="pastors__card">
+          <img
+            class="pastors__image"
+            src="../../assets/images/family.jpg"
+            alt=""
+          />
+        </div>
+        <div class="pastors__card">
+          <img
+            class="pastors__image"
+            src="../../assets/images/PstChris.jpg"
+            alt=""
+          />
+        </div>
+        <div class="pastors__card">
+          <img
+            class="pastors__image"
+            src="../../assets/images/women praying.jpg"
+            alt=""
+          />
+        </div>
+        <div class="pastors__card">
+          <img
+            class="pastors__image"
+            src="../../assets/images/family2.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section__seven">
+    <div class="section__four__top">
+      <div class="icon__wwe__center primary__color">
+        <img
+          class="img__logo__two__two"
+          src="/assets/images/ph-logo-circle.png"
+          alt=""
+        />
+        <p class="pText">Blogs & News</p>
+      </div>
+      <h2 class="sub__title primary__color">Latest Blogs & News</h2>
+    </div>
+    <div class="section__blog__bottom">
+      <div class="grid__card__two">
+        <div class="blog__card__wrapper">
+          <div class="blog__left__image">
+            <img
+              class="blog__image"
+              src="../../assets/images/hands-up.jpg"
+              alt=""
+            />
+          </div>
+          <div class="blog__right__details">
+            <div class="date__chat__icon">
+              <p><i class="ri-calendar-todo-fill"></i> 12 August, 2025</p>
+              <p><i class="ri-message-2-fill"></i> 12 August, 2025</p>
+            </div>
+            <h4>A Modern Church with Ancient roots Faith Generations</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod</p>
+            <button class="button__two">Read More</button>
+          </div>
+        </div>
+        <div class="blog__card__wrapper">
+          <div class="blog__left__image">
+            <img
+              class="blog__image"
+              src="../../assets/images/bible-reading.jpg"
+              alt=""
+            />
+          </div>
+          <div class="blog__right__details">
+            <div class="date__chat__icon">
+              <p><i class="ri-calendar-todo-fill"></i> 12 August, 2025</p>
+              <p><i class="ri-message-2-fill"></i> 12 August, 2025</p>
+            </div>
+            <h4>A Modern Church with Ancient roots Faith Generations</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod</p>
+            <button class="button__two">Read More</button>
+          </div>
+        </div>
+        <div class="blog__card__wrapper">
+          <div class="blog__left__image">
+            <img
+              class="blog__image"
+              src="../../assets/images/worship.jpg"
+              alt=""
+            />
+          </div>
+          <div class="blog__right__details">
+            <div class="date__chat__icon">
+              <p><i class="ri-calendar-todo-fill"></i> 12 August, 2025</p>
+              <p><i class="ri-message-2-fill"></i> 12 August, 2025</p>
+            </div>
+            <h4>A Modern Church with Ancient roots Faith Generations</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod</p>
+            <button class="button__two">Read More</button>
+          </div>
+        </div>
+        <div class="blog__card__wrapper">
+          <div class="blog__left__image">
+            <img
+              class="blog__image"
+              src="../../assets/images/women praying.jpg"
+              alt=""
+            />
+          </div>
+          <div class="blog__right__details">
+            <div class="date__chat__icon">
+              <p><i class="ri-calendar-todo-fill"></i> 12 August, 2025</p>
+              <p><i class="ri-message-2-fill"></i> 12 August, 2025</p>
+            </div>
+            <h4>A Modern Church with Ancient roots Faith Generations</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod</p>
+            <button class="button__two">Read More</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="button__one centered__btn">View Blog</button>
   </div>
 </div>

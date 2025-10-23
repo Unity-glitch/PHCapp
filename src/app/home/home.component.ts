@@ -1,28 +1,21 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { NavbarComponent } from '../navbar/navbar.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, NavbarComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
 export class HomeComponent {
   linkMenu: boolean = false;
-  text: string[] = [
-    'Reaching the unreached at all cost and reawakening the church to he responsibilities',
-    'You can go, pray and give',
-  ];
-
-  // currentText = this.text[0];
-  // index = 0;
+  activeTab = 'mission';
   constructor(private route: Router) {}
 
-  ngOnInit() {
-    // this.animatedtext();
-  }
+  ngOnInit() {}
 
   homePage() {
     this.route.navigate(['/']);
@@ -30,10 +23,4 @@ export class HomeComponent {
   showMenu() {
     this.linkMenu = true;
   }
-  // animatedtext() {
-  //   setInterval(() => {
-  //     this.index = (this.index + 1) % this.text.length;
-  //     this.currentText = this.text[this.index];
-  //   }, 3000);
-  // }
 }

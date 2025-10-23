@@ -1,9 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+@import "primeicons/primeicons.css";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: none;
+  overflow-y: none;
+  scrollbar-width: thin;
+  scrollbar-color: var(--tertiary-color2) #000000;
+  letter-spacing: 1px;
+}
 :root {
   --header-color: #fbfbfb !important;
   --primary-color: #002788 !important;
   --tertiary-color: #0026ff !important;
   --tertiary-color2: #000a3e !important;
+  --tertiary-color3: #ff1c03 !important;
   --secondaryBtn-color: #eff6fe !important;
   --text-color: #343639 !important;
   --default-padding-btn: 15px 30px;
@@ -33,15 +45,6 @@
   --sidebaritems: #abbff3;
 }
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  overflow-x: none;
-  overflow-y: none;
-  scrollbar-width: thin;
-  scrollbar-color: var(--tertiary-color2) #000000;
-}
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -62,7 +65,9 @@
   font-family: "jakarta";
   src: url(./assets/fonts/PlusJakartaSans-VariableFont_wght.ttf);
 }
-
+img {
+  cursor: pointer;
+}
 body {
   font-family: "jakarta";
   box-sizing: border-box;
@@ -89,23 +94,23 @@ body {
 }
 .title {
   color: #fff;
-  font-size: 45px;
+  font-size: 35px;
   line-height: 55px;
   font-family: "jakarta";
 }
 .sub__title {
-  font-size: 30px;
+  font-size: 25px;
   line-height: 40px;
   font-family: "jakarta";
 }
 .mivLogo {
-  width: 200px;
+  width: 23%;
 }
 h4 {
   font-family: "jakarta";
   word-break: break-word;
   line-height: 1.8;
-  font-size: clamp(0.78rem, 2.5vw, 0.875rem);
+  font-size: clamp(0.75rem, 2.5vw, 1rem);
   font-variation-settings: "wght" 800;
 }
 
@@ -132,30 +137,103 @@ h1 {
   font-size: clamp(1.25rem, 2.5vw, 1.5rem);
   font-variation-settings: "wght" 500;
 }
-
+.text__center {
+  text-align: center;
+}
+.text__left {
+  text-align: left;
+}
 .pText {
   font-family: "jakarta";
-  font-size: clamp(0.78rem, 2.5vw, 0.813rem);
+  font-size: clamp(0.8rem, 2.5vw, 0.913rem);
   word-break: break-word;
   font-variation-settings: "wght" 300;
-  font-size: 20px;
 }
 
 .pSubText {
   font-family: "jakarta";
   font-variation-settings: "wght" 300;
-  font-size: clamp(0.6rem, 2.5vw, 0.75rem);
+  font-size: clamp(0.7rem, 2.5vw, 0.8rem);
   line-height: 1.6;
   word-break: break-word;
-  font-size: 15px;
 }
+
+/* NavBar Style  */
+
+.img__logo {
+  width: 40px;
+  cursor: pointer;
+}
+.section__one__two__bg {
+  background: url(/assets/images/family2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+  background-color: rgba(0, 0, 0, 0.8);
+  /* height: 100vh; */
+}
+.section__one {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+  padding: 10px 30px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+  background-color: var(--header-color);
+  color: var(--primary-color);
+}
+
+.link__wrapper {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+}
+.link__wrapper.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.link__wrapper__two {
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+}
+.service__icon {
+  font-size: 30px;
+}
+.logo__text {
+  display: flex;
+  width: 60px;
+  line-height: 14px;
+  cursor: pointer;
+}
+.logo__wrapper {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+  padding: 5px 0;
+}
+
+/* NavBAr Style  */
 
 p {
   font-family: "jakarta";
   font-variation-settings: "wght" 300;
-  font-size: clamp(0.75rem, 2.5vw, 0.8rem);
+  font-size: clamp(0.7rem, 2.5vw, 0.8rem);
   line-height: 1.6;
   word-break: break-word;
+}
+.primary__color {
+  color: var(--primary-color);
+}
+button {
+  cursor: pointer;
+  font-size: clamp(0.8rem, 2.5vw, 0.9rem);
 }
 .btn__wrapper {
   display: flex;
@@ -165,13 +243,13 @@ p {
 .button__one {
   background-color: var(--primary-color);
   border: none;
-  padding: 8px 20px;
+  padding: 8px 28px;
   color: #fff;
   border-radius: 32px;
   cursor: pointer;
   font-family: "jakarta";
   font-variation-settings: "wght" 300;
-  font-size: clamp(0.6rem, 2.5vw, 0.75rem);
+  width: fit-content;
 }
 .button__one:hover {
   background-color: var(--tertiary-color);
@@ -183,9 +261,9 @@ p {
   background-color: transparent;
   border-radius: 32px;
   cursor: pointer;
+  width: 140px;
   font-family: "jakarta";
   font-variation-settings: "wght" 300;
-  font-size: clamp(0.6rem, 2.5vw, 0.75rem);
 }
 .button__three {
   position: relative;
@@ -199,7 +277,6 @@ p {
   z-index: 1;
   font-family: "jakarta";
   font-variation-settings: "wght" 300;
-  font-size: clamp(0.6rem, 2.5vw, 0.75rem);
 }
 .button__three::after {
   content: "";
@@ -233,7 +310,7 @@ p {
   display: inline-block;
   text-decoration: none;
   cursor: pointer;
-  color: #fff;
+  /* color: #fff; */
 }
 
 .link::after {
@@ -254,16 +331,19 @@ p {
   display: none;
 }
 .menu__icon {
-  color: var(--primary-color);
+  color: var(--primary-color) !important;
   font-size: 30px;
 }
 .img__logo__two {
   width: 6%;
 }
+.img__logo__two__two {
+  width: 4%;
+}
 .img__logo__three {
   position: absolute;
-  top: 10%;
-  right: 10px;
+  top: 2%;
+  right: 28px;
   transform: translateY(-50%);
   width: 50px;
 }
@@ -276,7 +356,6 @@ p {
   display: flex;
   align-items: center;
   column-gap: 5px;
-  width: 40%;
   margin: auto;
   justify-content: center;
 }
@@ -295,12 +374,11 @@ p {
   box-shadow: 0 0 5px #000;
 }
 .image__container {
+  padding: 0 20px;
   position: relative;
   display: inline-block;
 }
-.call__wrapper {
-  color: #fff;
-}
+
 .number__wrapper {
   display: flex;
   flex-direction: row;
@@ -310,6 +388,7 @@ p {
   font-weight: bold;
   font-size: 30px;
 }
+
 .section__four__top {
   display: flex;
   align-items: center;
@@ -319,32 +398,40 @@ p {
   justify-content: center;
 }
 .section__four__card {
-  width: 20%;
-  background-color: #fff;
+  background-color: var(--cardBg);
   box-shadow: 0 0 3px rgb(255, 255, 255);
+  align-items: center;
+  text-align: center;
+  padding: 12px 8px;
+  border-radius: 12px;
   display: flex;
   flex-direction: column;
-  row-gap: 15px;
-  align-items: start;
-  padding: 20px 10px;
-  border-radius: 12px;
+  row-gap: 12px;
 }
-
+.centered__btn {
+  display: block;
+  margin: 10px auto;
+}
 .section__four__img {
   width: 100%;
   border-radius: 12px;
 }
-.section__four__card__wrapper {
-  display: flex;
-  column-gap: 20px;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
+
+.grid__card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+.grid__card__two {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+  gap: 4rem;
+  padding: 10px;
 }
 .tab__button {
   padding: 6px 24px;
   background-color: var(--primary-color);
-  border: none;
+  border: 1px solid #002788;
   border-radius: 12px;
   color: #fff;
 }
@@ -360,14 +447,80 @@ p {
   font-weight: bold;
 }
 .cross__icon {
-  color: var(--primary-color);
+  color: var(--tertiary-color3);
 }
+.tab__details__wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  height: 30vh;
+}
+.tab__details {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  row-gap: 15px;
+}
+.icon__content {
+  display: flex;
+  column-gap: 10px;
+}
+.pastors__card {
+  width: 100%;
+}
+.pastors__image {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.section__six {
+  background-color: var(--header-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 40px;
+  padding: 6% 5%;
+  /* height: 70vh; */
+  text-align: center;
+}
+.section__seven {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+  justify-content: center;
+  padding: 6% 5%;
+  width: 100%;
+}
+.blog__right__details {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  text-align: left;
+}
+.date__chat__icon {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.blog__card__wrapper {
+  display: flex;
+  column-gap: 12px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.blog__image {
+  width: 280px;
+  border-radius: 12px;
+}
+
 @media (max-width: 1024px) {
-  .call__wrapper {
+  .call__wrapper,
+  .service__icon {
     display: none;
   }
   .title__wrapper {
-    width: 100% !important;
+    width: 100%;
     padding: 10px;
   }
   .title {
@@ -381,6 +534,45 @@ p {
 }
 
 @media (max-width: 900px) {
+  .mivLogo {
+    width: 30%;
+  }
+  h1 {
+    font-size: 35px !important;
+    line-height: 50px !important;
+  }
+  h2 {
+    font-size: 32px !important;
+  }
+  h3 {
+    font-size: 30px !important;
+  }
+  h4 {
+    font-size: 28px !important;
+  }
+  h5 {
+    font-size: 26px !important;
+  }
+  h6 {
+    font-size: 24px !important;
+  }
+  .logo__text {
+    /* font-size: 18px !important; */
+  }
+  .pText {
+    font-size: 25px !important;
+  }
+  .pSubText {
+    font-size: 20px !important;
+  }
+  .section__one__two__bg {
+    height: 60vh !important;
+  }
+  .title__wrapper {
+    padding: 0 20px !important;
+    width: 100%;
+    height: 50vh !important;
+  }
   .link__wrapper {
     display: none !important;
   }
@@ -410,4 +602,48 @@ p {
   .section__one {
     padding: 10px !important;
   }
+  .section__three__wrapper {
+    flex-direction: column;
+    row-gap: 60px;
+    width: 100%;
+  }
+  .left {
+    width: 100% !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center;
+  }
+
+  .icon__wwe {
+    align-items: center !important;
+    justify-content: center;
+  }
+  .section__three__wrapper__two {
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 0 2% !important;
+  }
+  .section__three__card {
+    align-items: center !important;
+  }
+  .section__five {
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+  }
+  .section__six {
+    padding: 30px !important;
+    justify-content: center;
+  }
+  .video__wrapper {
+    width: 40%;
+  }
+  .blog__card__wrapper {
+    flex-direction: column;
+  }
+  .blog__right__details {
+    align-items: center;
+  }
+}
+@media (max-width: 768px) {
 }

@@ -73,7 +73,7 @@ body {
   box-sizing: border-box;
   font-variation-settings: "wght" 350;
   color: var(--text-color);
-  max-width: 100vw;
+  /* max-width: 100vw; */
   overflow-x: hidden;
   background-color: var(--pageBg);
 }
@@ -142,6 +142,11 @@ h1 {
 }
 .text__left {
   text-align: left;
+}
+.d_flex {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
 }
 .pText {
   font-family: "jakarta";
@@ -233,7 +238,7 @@ p {
 }
 button {
   cursor: pointer;
-  font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+  font-size: clamp(0.7rem, 2.5vw, 0.8rem);
 }
 .btn__wrapper {
   display: flex;
@@ -342,7 +347,7 @@ button {
 }
 .img__logo__three {
   position: absolute;
-  top: 2%;
+  bottom: 2%;
   right: 28px;
   transform: translateY(-50%);
   width: 50px;
@@ -508,12 +513,65 @@ button {
   align-items: center;
   justify-content: center;
   width: 100%;
+  padding: 0 2%;
 }
 .blog__image {
   width: 280px;
   border-radius: 12px;
 }
 
+.form__wrapper {
+  background-image: url(../src/assets/images/doantion-image.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  padding: 5% 0;
+}
+.form__card {
+  width: 52%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+  justify-content: center;
+  /* height: 80vh; */
+  margin-left: 80px;
+  background-color: #2e2626;
+  padding: 4%;
+  border-radius: 12px;
+}
+input {
+  width: 280px;
+  padding: 12px 10px;
+  outline: none;
+  border: 1px solid white;
+  border-radius: 8px;
+  background-color: transparent;
+  color: white;
+}
+input::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+.btn__donate {
+  width: 100%;
+  padding: 13px 24px;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 12px;
+}
+.btn__donate:hover {
+  background-color: #a3a3a3;
+  color: white;
+}
+.donation {
+  display: flex;
+  column-gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
 @media (max-width: 1024px) {
   .call__wrapper,
   .service__icon {
@@ -534,6 +592,27 @@ button {
 }
 
 @media (max-width: 900px) {
+  .img__logo__two__two {
+    width: 8%;
+  }
+  .img__logo__two {
+    width: 8%;
+  }
+  .sub__title {
+    text-align: center;
+  }
+  .btn__wrapper {
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  .date__chat__icon {
+    flex-direction: row;
+  }
+  .blog__image {
+    width: 100%;
+    margin: 0 auto;
+    /* padding: 0 10px; */
+  }
   .mivLogo {
     width: 30%;
   }
@@ -566,12 +645,13 @@ button {
     font-size: 20px !important;
   }
   .section__one__two__bg {
-    height: 60vh !important;
+    align-items: center !important;
+    height: 100vh !important;
   }
   .title__wrapper {
     padding: 0 20px !important;
     width: 100%;
-    height: 50vh !important;
+    height: 100vh !important;
   }
   .link__wrapper {
     display: none !important;
@@ -621,29 +701,46 @@ button {
   .section__three__wrapper__two {
     flex-direction: column;
     row-gap: 20px;
-    padding: 0 2% !important;
   }
   .section__three__card {
     align-items: center !important;
   }
+
   .section__five {
     flex-direction: column;
     justify-content: center;
-    height: 100vh;
+    height: 100vh !important;
   }
   .section__six {
+    /* height: 90vh; */
+    margin: 12% 2% !important;
+    justify-content: center;
+  }
+  .section__seven {
     padding: 30px !important;
     justify-content: center;
   }
   .video__wrapper {
-    width: 40%;
+    width: 400px;
   }
   .blog__card__wrapper {
     flex-direction: column;
+    row-gap: 12px;
   }
   .blog__right__details {
+    align-items: center;
+    text-align: center;
+    row-gap: 12px;
+  }
+  .tab__details__wrapper {
     align-items: center;
   }
 }
 @media (max-width: 768px) {
+  /* .secton__four {
+    height: 100vh !important;
+  }
+  .secton__five {
+    height: 100vh !important;
+  } */
 }

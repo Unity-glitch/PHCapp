@@ -21,14 +21,14 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  row-gap: 80px;
+  row-gap: 60px;
   padding: 6% 5%;
 }
 .left {
   width: 40%;
   display: flex;
   flex-direction: column;
-  row-gap: 15px;
+  row-gap: 20px;
   align-items: start;
 }
 .right {
@@ -50,7 +50,6 @@
   column-gap: 40px;
   align-items: center;
   justify-content: space-between;
-  padding: 0 2%;
   width: 100%;
 }
 
@@ -71,6 +70,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* height: 90vh; */
+  height: 90vh;
   padding: 6% 5%;
+}
+
+/* Logo Animation  */
+.rotate {
+  animation: rotate 5s infinite;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

@@ -46,7 +46,7 @@
 }
 
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 3px;
 }
 
 ::-webkit-scrollbar-track {
@@ -55,7 +55,7 @@
 
 ::-webkit-scrollbar-thumb {
   background: #888;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -162,6 +162,9 @@ h1 {
   line-height: 1.6;
   word-break: break-word;
 }
+.text__white {
+  color: white;
+}
 
 /* NavBar Style  */
 
@@ -174,7 +177,7 @@ h1 {
   background-size: cover;
   background-position: center;
   background-blend-mode: overlay;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.55);
   /* height: 100vh; */
 }
 .section__one {
@@ -294,7 +297,7 @@ button {
   z-index: -1;
   transition: width 0.4s ease-in-out;
   border-radius: 32px;
-  transform: scaleX(0);
+  transform: scaleX(-1);
   transform-origin: left;
   transition: transform 1s ease;
 }
@@ -302,7 +305,7 @@ button {
 .button__three:hover::after {
   width: 100%;
   transform: scaleX(1);
-  transition: transform 1s ease;
+  transition: transform 0.5s ease;
 }
 .button__two:hover,
 .button__three:hover {
@@ -369,7 +372,7 @@ button {
 }
 .span__two {
   color: var(--primary-color);
-  font-weight: 600;
+  font-weight: bold;
 }
 .women__praying {
   display: block;
@@ -379,7 +382,8 @@ button {
   box-shadow: 0 0 5px #000;
 }
 .image__container {
-  padding: 0 20px;
+  width: 100%;
+  padding: 0 10px;
   position: relative;
   display: inline-block;
 }
@@ -427,6 +431,11 @@ button {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
 }
+.grid__card__form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
 .grid__card__two {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
@@ -436,10 +445,14 @@ button {
 .tab__button {
   padding: 6px 24px;
   background-color: var(--primary-color);
-  border: 1px solid #002788;
   border-radius: 12px;
+  border: none;
   color: #fff;
 }
+.tab__button:hover {
+  border: 1ps solid var(--primary-color);
+}
+
 .tab__wrapper {
   display: flex;
   align-items: center;
@@ -484,8 +497,8 @@ button {
   flex-direction: column;
   justify-content: center;
   row-gap: 40px;
+  width: 100%;
   padding: 6% 5%;
-  /* height: 70vh; */
   text-align: center;
 }
 .section__seven {
@@ -526,19 +539,18 @@ button {
   background-size: cover;
   background-position: center;
   background-blend-mode: overlay;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.2);
   color: #fff;
   padding: 5% 0;
 }
 .form__card {
-  width: 52%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   row-gap: 24px;
   justify-content: center;
-  /* height: 80vh; */
   margin-left: 80px;
-  background-color: #2e2626;
+  background: linear-gradient(to top, #2e262600, #2e262600, #000000);
   padding: 4%;
   border-radius: 12px;
 }
@@ -563,7 +575,7 @@ input::placeholder {
   border-radius: 12px;
 }
 .btn__donate:hover {
-  background-color: #a3a3a3;
+  background-color: #848484;
   color: white;
 }
 .donation {
@@ -571,6 +583,16 @@ input::placeholder {
   column-gap: 30px;
   align-items: center;
   justify-content: center;
+}
+
+/* Testimonials  */
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  justify-content: center;
+  align-items: center;
+  padding: 6% 5%;
 }
 @media (max-width: 1024px) {
   .call__wrapper,
@@ -592,6 +614,9 @@ input::placeholder {
 }
 
 @media (max-width: 900px) {
+  .title {
+    font-size: 30px;
+  }
   .img__logo__two__two {
     width: 8%;
   }
@@ -611,14 +636,14 @@ input::placeholder {
   .blog__image {
     width: 100%;
     margin: 0 auto;
-    /* padding: 0 10px; */
   }
   .mivLogo {
-    width: 30%;
+    width: 40%;
   }
   h1 {
-    font-size: 35px !important;
-    line-height: 50px !important;
+    font-weight: 400 !important;
+    font-size: 30px !important;
+    line-height: 40px !important;
   }
   h2 {
     font-size: 32px !important;
@@ -649,7 +674,7 @@ input::placeholder {
     height: 100vh !important;
   }
   .title__wrapper {
-    padding: 0 20px !important;
+    padding: 0 5px !important;
     width: 100%;
     height: 100vh !important;
   }
@@ -682,6 +707,9 @@ input::placeholder {
   .section__one {
     padding: 10px !important;
   }
+  .section__three {
+    padding: 6% 2%;
+  }
   .section__three__wrapper {
     flex-direction: column;
     row-gap: 60px;
@@ -707,23 +735,31 @@ input::placeholder {
   }
 
   .section__five {
+    width: 100%;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
     height: 100vh !important;
   }
   .section__six {
-    /* height: 90vh; */
-    margin: 12% 2% !important;
+    padding: 12% 2%;
     justify-content: center;
   }
+  .pastors__image {
+    padding: 0 30px;
+    border-radius: 32px !important;
+  }
   .section__seven {
-    padding: 30px !important;
+    width: 100% !important;
     justify-content: center;
+    padding: 6% 10px;
   }
   .video__wrapper {
     width: 400px;
   }
   .blog__card__wrapper {
+    width: 100%;
+    margin-right: auto;
     flex-direction: column;
     row-gap: 12px;
   }
@@ -735,12 +771,53 @@ input::placeholder {
   .tab__details__wrapper {
     align-items: center;
   }
-}
-@media (max-width: 768px) {
-  /* .secton__four {
+  input {
+    width: 100%;
+  }
+  .donation {
+    flex-direction: column;
+    row-gap: 20px;
+    width: 100%;
+  }
+  .form__card {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-left: 0;
+    padding: 3% 8%;
+    height: 100vh;
+  }
+  .form__wrapper {
+    padding: 0;
     height: 100vh !important;
   }
-  .secton__five {
-    height: 100vh !important;
-  } */
+  .grid__card__two {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 4rem;
+    padding: 10px;
+  }
+  .grid__card__form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .slider-container {
+    width: 100% !important;
+  }
+  .slider__details {
+    width: 100%;
+  }
+  .date__chat__icon {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 768px) {
+  input {
+    width: 100% !important;
+  }
 }

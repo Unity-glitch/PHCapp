@@ -1,0 +1,24 @@
+<div class="slider-container">
+  <div class="slider__details">
+    <p class="pSubText text__white">{{ slider[currentIndex].description }}</p>
+    <img
+      [src]="slider[currentIndex].url"
+      class="slide-image"
+      alt="Image slide"
+    />
+    <p class="text__white">{{ slider[currentIndex].name }}</p>
+  </div>
+  <div class="controls">
+    <p class="control-arrow" (click)="prevImage()">&#10094;</p>
+    <div class="dots">
+      <span
+        *ngFor="let img of slider; let i = index"
+        class="dot"
+        [class.active]="i === currentIndex"
+        (click)="selectImage(i)"
+      >
+      </span>
+    </div>
+    <p class="control-arrow" (click)="nextImage()">&#10095;</p>
+  </div>
+</div>

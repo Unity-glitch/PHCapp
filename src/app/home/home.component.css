@@ -31,8 +31,7 @@
   row-gap: 20px;
   align-items: start;
 }
-.right {
-}
+
 .section__three__wrapper {
   display: flex;
   column-gap: 100px;
@@ -58,7 +57,7 @@
   background-size: cover;
   background-position: center;
   background-blend-mode: overlay;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.4);
   row-gap: 70px;
   padding: 6% 5%;
   display: flex;
@@ -68,10 +67,17 @@
 
 .section__five {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  height: 90vh;
-  padding: 6% 5%;
+  padding: 3% 5%;
+  width: 100%;
+  margin: 0 auto;
+}
+.left__five {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  padding: 0 3%;
 }
 
 /* Logo Animation  */

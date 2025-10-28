@@ -8,9 +8,10 @@ import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
 import { ToastModule } from 'primeng/toast';
 import { HomeComponent } from './home/home.component';
+import { ImageSliderComponent } from './image-slider/image-slider.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -18,8 +19,10 @@ import { HomeComponent } from './home/home.component';
     TableModule,
     ToastModule,
     HomeComponent,
+    AppComponent,
+    ImageSliderComponent,
   ],
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [],
 })
 export class AppModule {}
